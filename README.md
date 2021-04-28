@@ -460,6 +460,7 @@ https://www.youtube.com/watch?v=zAe5n2F3IQI
 ![GRPGH](https://miro.medium.com/max/700/1*K0czTfHWTtNNBhvaVdyXfw.gif)
 ![GRPGH](https://graphql-engine-cdn.hasura.io/learn-hasura/assets/graphql-react/graphql-api.gif)
 
-### testing 
+
+### Testing 
 ![test](https://user-images.githubusercontent.com/76408716/116463887-efa1dd00-a873-11eb-9d4f-f1a3f1492465.png)
 
