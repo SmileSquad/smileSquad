@@ -9,7 +9,6 @@ const basicAuth = require('./middleware/basic.js');
 router.post('/signup', async (req, res, next) => {
   try {
     let newUser = await user.addUser(req.body);
-    console.log('__user__', newUser);
     res.status(201).json(newUser);
   } catch (e) {
     next(e.message);
