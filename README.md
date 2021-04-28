@@ -132,20 +132,6 @@ We don't have that many relation so we decided to use mongoDB for our Webiste
   - We decided to store all the videos we get from the youtube API because we have a limit number of request per day.
   - 
 
-
-### Git Process
-
-- Our API that will be consumed by our frontend.
-
-- Using GitHub Orginaiztion.
-
-- We will use the PR review:
-  - Two will be reviewing the PR and confirm the merge.
-  - The team leader
-  - It depends on the workflow.
-  - If the PR get approved we will merge it.
-
-
 ## Routes Documentation 
 ### REST API
 #### User's Routes:
@@ -473,3 +459,6 @@ https://www.youtube.com/watch?v=zAe5n2F3IQI
 ### GRAPHQL API
 ![GRPGH](https://miro.medium.com/max/700/1*K0czTfHWTtNNBhvaVdyXfw.gif)
 ![GRPGH](https://graphql-engine-cdn.hasura.io/learn-hasura/assets/graphql-react/graphql-api.gif)
+
+### testing 
+![test](https://drive.google.com/file/d/1ZUmStqv-sZaWAWbGlsfB-K2NTmKzMbYO/view?usp=sharing)
