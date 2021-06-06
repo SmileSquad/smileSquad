@@ -12,7 +12,7 @@ const notFoundHandler = require('./error-handlers/404');
 const errorHandler = require('./error-handlers/500');
 const adminBro = require('./admin/adminbro/adminBro.js');
 const router = require('./admin/router/router.js'); // admin panel router
-// const googleRouter = require('./auth/middleware/google.js');
+const googleRouter = require('./auth/middleware/google.js');
 // const facebookRouter = require('./auth/middleware/facebook.js');
 const videoRouter = require('./routes/videoGame.js');
 const { v4: uuidv4 } = require('uuid');
@@ -44,7 +44,7 @@ app.use('/api/v1', gameRoutes);
 app.use('/api/v1', videoRouter);
 app.use('/api/v1', postsRoutes);
 app.use(videoRouter);
-// app.use(googleRouter);
+app.use('/api/v1', googleRouter);
 // app.use(facebookRouter);
 // testing Routes
 app.get('/', (req, res) => {
