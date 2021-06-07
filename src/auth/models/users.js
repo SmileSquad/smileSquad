@@ -48,6 +48,9 @@ userSchema.virtual('token').get(function () {
     username: this.username,
     email: this.email,
     imgUrl: this.imgUrl,
+    gamePlayer: this.gamePlayed,
+    gameWin: this.gameWin,
+    winRatio: this.winRatio,
   };
   return jwt.sign(tokenData, process.env.SECRET);
 });
