@@ -99,15 +99,16 @@ class DataCollection {
     let post = this.postModel.findByIdAndDelete(id).populate('user');
     return post;
   }
-  async friendsPosts(id) {
-    let user = await this.model.findById(id).populate('friendList', 'posts');
-    let arr = [];
-    user.friendList.forEach((friend) => {
-      friend.posts.forEach((post) => {
-        let friendPost = this.postModel.findById(post).populate('user');
-        arr.push(friendPost);
-      });
-    });
+  async friendsPosts() {
+    let arr = await this.postModel.find({}).populate('user');
+    // let user = await this.model.findById(id).populate('friendList', 'posts');
+    // let arr = [];
+    // user.friendList.forEach((friend) => {
+    //   friend.posts.forEach((post) => {
+    //     let friendPost = this.postModel.findById(post).populate('user');
+    //     arr.push(friendPost);
+    //   });
+    // });
     return arr;
   }
 }

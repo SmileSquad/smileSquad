@@ -10,7 +10,7 @@ const Post = require('../auth/models/posts');
 router.post('/addPost', bearerAuth, addPostHandler);
 router.delete('/removePost/:id', bearerAuth, removePostHandler);
 router.put('/updatePost', bearerAuth, updatePostHandler);
-router.get('/posts/:id', bearerAuth, getAllPostsHandler);
+router.get('/posts', bearerAuth, getAllPostsHandler);
 
 // post req.body = {userId, title, content}
 
@@ -45,7 +45,7 @@ async function updatePostHandler(req, res, next) {
 
 async function getAllPostsHandler(req, res, next) {
   try {
-    let postArray = await users.friendsPosts(req.params.id);
+    let postArray = await users.friendsPosts();
     res.status(200).json(postArray);
   } catch (e) {
     next(e.message);
